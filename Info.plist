@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleName</key>
+	<string>MinecraftLauncher</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.1</string>
+	<key>CFBundleShortVersionString</key>
+	<string>MinecraftLauncher 1.0.1</string>
+	<key>CFBundleExecutable</key>
+	<string>MinecraftLauncher</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleGetInfoString</key>
+	<string>MinecraftLauncher 1.0.1 © Mojang Specifications, Inc, 2013</string>
+	<key>CFBundleIconFile</key>
+	<string>favicon.icns</string>
+	<key>CFBundleAllowMixedLocalizations</key>
+	<true/>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>8.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.minecraft.bootstrap.Bootstrap</string>
+	<key>LSHasLocalizedDisplayName</key>
+	<true/>
+	<key>CFBundleDisplayName</key>
+	<string>Minecraft</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+</dict>
+</plist>

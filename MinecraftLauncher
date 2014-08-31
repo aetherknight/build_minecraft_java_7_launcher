@@ -1,0 +1,36 @@
+#!/bin/sh
+# Based on http://stackoverflow.com/questions/17546355/java-appbundler-application-pointing-to-jre-defined-by-java-home/17546508#17546508
+
+PRG=$0
+
+# If $PRG is a symlink, find the original script, assumed to be in the
+# application bundle.
+while [ -h "${PRG}" ]; do
+    ls=`ls -ld "${PRG}"`
+    link=`expr "${ls}" : '^.*-> \(.*\)$' 2>/dev/null`
+    if expr "${link}" : '^/' 2> /dev/null >/dev/null; then
+        PRG="${link}"
+    else
+        PRG="`dirname "${PRG}"`/${link}"
+    fi
+done
+
+# $APP_PACKAGE, when used to configure Apple's Java 6 in the Info.plis, pointed
+# to the top of the application bundle. However, it is not exposed to the
+# application/shell script, so we have to find this ourselves.
+app_basedir="`dirname \"${PRG}\"`/.."
+CLASSPATH="${app_basedir}/Resources/Java/Bootstrap.jar"
+
+if [ -n "${JAVA_HOME}" ]; then
+    JAVACMD="${JAVA_HOME}/bin/java"
+elif [ -x /usr/libexec/java_home ]; then
+    JAVACMD="`/usr/libexec/java_home`/bin/java"
+else
+    JAVACMD="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java"
+fi
+
+exec "${JAVACMD}" -classpath "${CLASSPATH}" \
+    -Xmx1024m \
+    -Xdock:icon="${app_basedir}/Resources/favicon.icns" \
+    -Dapple.laf.useScreenMenuBar=true \
+    net.minecraft.bootstrap.Bootstrap
