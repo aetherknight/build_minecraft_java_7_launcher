@@ -7,8 +7,8 @@ Java 6 launcher.
 
 The script takes the path to the original Minecraft.app launcher, and it will
 create a new launcher that uses a shell script instead of the
-JavaApplicationStub used by Apple's Java 6. The script should work with either
-Oracle's Java 7+ or Apple's Java 6.
+JavaApplicationStub used by Apple's Java 6. The new launcher script should work
+with either Oracle's Java 7+ or Apple's Java 6.
 
 To create the new launcher:
 
