@@ -5,14 +5,14 @@ Java 6 launcher.
 
 ## Usage
 
-The script takes the path to the original Minecraft.app launcher, and it will
-create a new launcher that uses a shell script instead of the
-JavaApplicationStub used by Apple's Java 6. The new launcher script should work
-with either Oracle's Java 7+ or Apple's Java 6.
+1. Download the latest zip of the repository: https://github.com/aetherknight/build_minecraft_java_7_launcher/archive/master.zip
 
-To create the new launcher:
+2. Unzip it
 
-    ./build_minecraft_java_7_launcher /path/to/Minecraft.app /path/to/Minecraft-newlauncher.app
+3. Run "Build Java 7-compatible Minecraft Launcher.app"
 
-This approach is taken in order to avoid storing the bootstrap.jar or app icon
-in a repository.
+4. When prompted, choose your original Minecraft launcher
+
+5. When prompted, pick a location and name for the launcher it will create.
+
+6. Done. Use the new launcher!
