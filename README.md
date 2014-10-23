@@ -5,7 +5,7 @@ Java 6 launcher.
 
 ## Usage
 
-1. Download the latest zip of the repository: https://github.com/aetherknight/build_minecraft_java_7_launcher/archive/master.zip
+1. Download the latest release of the compiled app: https://github.com/aetherknight/build_minecraft_java_7_launcher/releases
 
 2. Unzip it
 
