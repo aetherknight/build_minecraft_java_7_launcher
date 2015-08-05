@@ -23,7 +23,7 @@ CLASSPATH="${app_basedir}/Resources/Java/Bootstrap.jar"
 
 if [ -n "${JAVA_HOME}" ]; then
     JAVACMD="${JAVA_HOME}/bin/java"
-elif [ -x /usr/libexec/java_home ]; then
+elif [ -x /usr/libexec/java_home ] && /usr/libexec/java_home > /dev/null 2>&1 ; then
     JAVACMD="`/usr/libexec/java_home`/bin/java"
 else
     JAVACMD="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java"
